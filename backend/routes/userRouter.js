@@ -9,9 +9,9 @@ import { isAuthenticated } from "../middlewares/auth.js";
 
 const router = express.Router();
 
-// router.get("/", (req, res) => {
-//   res.send("Backend is working!");
-// });
+router.get("/check", (req, res) => {
+  res.send("Backend is working!");
+});
 
 router.post("/login", login);
 router.get("/logout", isAuthenticated, logout);
